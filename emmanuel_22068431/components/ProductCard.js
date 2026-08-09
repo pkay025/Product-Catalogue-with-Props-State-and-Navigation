@@ -1,13 +1,13 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 const ProductCard = ({ image, name, price, rating }) => {
     return (
-        <View style={styles.card}>
+        <TouchableOpacity style={styles.card}>
             <Image source={{ uri: image }} style={styles.image} />
             <Text style={styles.name}>{name}</Text>
             <Text style={styles.price}>${price}</Text>
             <Text style={styles.rating}>Rating: {rating}</Text>
-        </View>
+        </TouchableOpacity>
     );
 
 }
