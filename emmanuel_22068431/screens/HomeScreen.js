@@ -4,49 +4,49 @@ import ProductCard from '../components/ProductCard';
 const products = [
   {
     id: '1',
-    image: 'AirPods Pro.png',
+    image: require('../assets/AirPods Pro.png'),
     name: 'AirPods Pro',
     price: '$120',
     rating: '4.5',
   },
   {
     id: '2',
-    image: 'Nike Air Max 270.png',
+    image: require('../assets/Nike Air Max 270.png'),
     name: 'Nike Air Max 270',
     price: '$90',
     rating: '4.3',
   },
   {
     id: '3',
-    image: 'Nike Air Force 1.png',
+    image: require('../assets/Nike Air Force 1.png'),
     name: 'Nike Air Force 1',
     price: '$80',
     rating: '4.2',
   },
   {
     id: '4',
-    image: 'Women Perfume.png',
+    image: require('../assets/Women Perfume.png'),
     name: 'Women Perfume',
     price: '$110',
     rating: '4.7',
   },
   {
     id: '5',
-    image: 'Zealot Speaker.png',
+    image: require('../assets/Zealot Speaker.png'),
     name: 'Zealot Speaker',
     price: '$110',
     rating: '4.7',
   },
   {
     id: '6',
-    image: 'Premium Red Office dress.png',
+    image: require('../assets/Premium Red Office dress.png'),
     name: 'Premium Red Office dress',
     price: '$110',
     rating: '4.7',
   },
 ];
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Products</Text>
@@ -61,6 +61,11 @@ const HomeScreen = () => {
             name={item.name}
             price={item.price}
             rating={item.rating}
+            onPress={() =>
+              navigation.navigate('ProductDetails', {
+                product: item,
+              })
+            }
           />
         )}
       />
@@ -84,28 +89,3 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
