@@ -11,8 +11,8 @@ const WelcomeScreen = ({ navigation }) => {
        </View>
 
        <Pressable 
-        style={{ backgroundColor: '#FE8866', padding: 15, borderRadius: 5, marginTop: 20 }}
-        onPress={() => navigation.navigate('Home')}
+        style={{ backgroundColor: '#FE8866', padding: 10, borderRadius: 10, marginTop: 20 }}
+        onPress={() => navigation.navigate('Main')}
        >
          <Text style={{ color: '#fff', fontSize: 32, fontWeight: 'regular' }}>Get Started</Text>
        </Pressable> 

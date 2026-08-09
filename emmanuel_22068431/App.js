@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import WelcomeScreen from './screens/WelcomeScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -29,7 +30,26 @@ function HomeStack() {
 
 function MainTabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        headerShown: false,
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+
+          if (route.name === 'Home') {
+            iconName = 'home';
+          } else if (route.name === 'Cart') {
+            iconName = 'shopping-cart';
+          } else if (route.name === 'Profile') {
+            iconName = 'person';
+          }
+
+          return <MaterialIcons name={iconName} size={size} color={color} />;
+        },
+        tabBarActiveTintColor: '#FE8866',
+        tabBarInactiveTintColor: 'gray',
+      })}
+    >
       <Tab.Screen
         name="Home"
         component={HomeStack}
