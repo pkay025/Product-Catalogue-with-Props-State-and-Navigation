@@ -1,10 +1,13 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 const ProfileScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile</Text>
-      <Text>Welcome to your profile.</Text>
+      <Image
+        style={styles.image}
+        source={require('../assets/Paakow.jpg')}
+      />
+      <Text style={styles.name}>Emmanuel Nunoo Mensah</Text>
     </View>
   );
 };
@@ -15,8 +18,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-  title: {
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    marginBottom: 20,
+  },
+  name: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,

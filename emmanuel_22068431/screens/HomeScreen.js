@@ -4,8 +4,8 @@ import ProductCard from '../components/ProductCard';
 const products = [
   {
     id: '1',
-    image: require('../assets/AirPods Pro.png'),
-    name: 'AirPods Pro',
+    image: require('../assets/Smart UltraSonic Wrist Watch.png'),
+    name: 'Smart UltraSonic Wrist Watch',
     price: '$120',
     rating: '4.5',
   },
