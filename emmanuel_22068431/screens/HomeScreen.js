@@ -8,6 +8,7 @@ const products = [
     name: 'Smart UltraSonic Wrist Watch',
     price: '$120',
     rating: '4.5',
+    bgColor: '#E6F0FF',
   },
   {
     id: '2',
@@ -15,6 +16,7 @@ const products = [
     name: 'Nike Air Max 270',
     price: '$90',
     rating: '4.3',
+    bgColor: '#FFF3E6',
   },
   {
     id: '3',
@@ -36,6 +38,7 @@ const products = [
     name: 'Zealot Speaker',
     price: '$110',
     rating: '4.7',
+    bgColor: '#F5F4FF',
   },
   {
     id: '6',
@@ -43,6 +46,7 @@ const products = [
     name: 'Premium Red Office dress',
     price: '$110',
     rating: '4.7',
+    bgColor: '#FFE9F0',
   },
 ];
 
@@ -61,6 +65,7 @@ const HomeScreen = ({ navigation }) => {
             name={item.name}
             price={item.price}
             rating={item.rating}
+            bgColor={item.bgColor}
             onPress={() =>
               navigation.navigate('ProductDetails', {
                 product: item,

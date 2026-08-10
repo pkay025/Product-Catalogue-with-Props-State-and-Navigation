@@ -5,10 +5,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const ProductCard = ({ image, name, price, rating, onPress }) => {
+const ProductCard = ({ image, name, price, rating, bgColor, onPress }) => {
   return (
     <TouchableOpacity
-      style={styles.card}
+      style={[styles.card, { backgroundColor: bgColor || '#fff' }]}
       onPress={onPress}
     >
       <Image
