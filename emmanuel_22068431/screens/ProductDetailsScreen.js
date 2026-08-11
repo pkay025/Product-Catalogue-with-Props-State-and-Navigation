@@ -1,15 +1,37 @@
-import { View, Text, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+} from 'react-native';
 
 const ProductDetailsScreen = ({ route }) => {
   const { product } = route.params;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{product.name}</Text>
 
-      <Text>{product.price}</Text>
+      <Image
+        source={product.image}
+        style={styles.image}
+      />
 
-      <Text>{product.rating}</Text>
+      <View style={styles.details}>
+
+        <Text style={styles.name}>
+          {product.name}
+        </Text>
+
+        <Text style={styles.price}>
+          {product.price}
+        </Text>
+
+        <Text style={styles.rating}>
+          Rating: {product.rating}
+        </Text>
+
+      </View>
+
     </View>
   );
 };
@@ -17,13 +39,34 @@ const ProductDetailsScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#f5f5f5',
   },
 
-  title: {
-    fontSize: 24,
+  image: {
+    width: 'auto',
+    height: 350,
+    resizeMode: 'contain',
+    backgroundColor: '#fff',
+  },
+
+  details: {
+    padding: 20,
+  },
+
+  name: {
+    fontSize: 26,
     fontWeight: 'bold',
+    marginBottom: 10,
+  },
+
+  price: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+
+  rating: {
+    fontSize: 16,
   },
 });
 

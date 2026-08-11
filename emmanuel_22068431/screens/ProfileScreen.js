@@ -31,7 +31,7 @@ const ProfileScreen = () => {
         placeholder="Phone Number"
         keyboardType="phone-pad"
       />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => alert('Profile saved successfully!')}>
         <Text style={styles.buttonText}>Save Profile</Text>
       </TouchableOpacity>
     </View>
