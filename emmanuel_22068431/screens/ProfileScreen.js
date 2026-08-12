@@ -1,8 +1,17 @@
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+import { 
+  View,
+  Text, 
+  StyleSheet, 
+  Image, 
+  TextInput, 
+  TouchableOpacity,
+  ScrollView
+ } from 'react-native';
 
 const ProfileScreen = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}
+    contentContainerStyle={styles.content}>
       <Image
         style={styles.image}
         source={require('../assets/Paakow.jpg')}
@@ -34,15 +43,17 @@ const ProfileScreen = () => {
       <TouchableOpacity style={styles.button} onPress={() => alert('Profile saved successfully!')}>
         <Text style={styles.buttonText}>Save Profile</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+  },
+  content: {
     alignItems: 'center',
+    paddingVertical: 30,
   },
   image: {
     width: 150,
