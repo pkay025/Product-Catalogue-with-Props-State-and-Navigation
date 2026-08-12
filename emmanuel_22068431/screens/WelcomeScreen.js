@@ -1,4 +1,11 @@
-import { View, Text, Button, StyleSheet, Image, Pressable } from 'react-native';
+import { 
+  View, 
+  Text, 
+  Button, 
+  StyleSheet, 
+  Image, 
+  Pressable 
+} from 'react-native';
 
 const WelcomeScreen = ({ navigation }) => {
   return (

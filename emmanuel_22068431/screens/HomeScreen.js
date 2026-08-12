@@ -1,4 +1,9 @@
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { 
+  View, 
+  Text, 
+  FlatList, 
+  StyleSheet 
+} from 'react-native';
 import ProductCard from '../components/ProductCard';
 
 const products = [
